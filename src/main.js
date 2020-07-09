@@ -14,6 +14,10 @@ var backToMainButton = document.querySelector('.back-to-main');
 var mainSection = document.querySelector('.main-poster');
 var formSection = document.querySelector('.poster-form');
 var savedPostersSection = document.querySelector('.saved-posters');
+//_form
+var inputImage = document.querySelector('#poster-image-url')
+var inputTitle = document.querySelector('#poster-title')
+var inputQuote = document.querySelector('#poster-quote')
 
 // we've provided you with some data to work with 👇
 var images = [
@@ -132,6 +136,12 @@ showSavedButton.addEventListener('click', displaySavedPosters);
 backToMainButton.addEventListener('click', goHome);
 
 // functions and event handlers go here 👇
+function storeUsersData() {
+  console.log(inputImage.value)
+  console.log(inputTitle.value)
+  console.log(inputQuote.value)
+}
+
 function displaySavedPosters() {
   savedPostersSection.classList.remove('hidden');
   mainSection.classList.add('hidden');
@@ -139,7 +149,10 @@ function displaySavedPosters() {
 
 function createUserPoster(event) {
   event.preventDefault();
-  goHome();
+  storeUsersData()
+  // create a new instance of the poster class
+  goHome(); //takes us back to main page
+  //display the newley created poster image
 };
 
 function goHome() {
@@ -157,7 +170,6 @@ function showPostersForm() {
   formSection.classList.remove('hidden');
   mainSection.classList.add('hidden');
 };
-
 
 // (we've provided one for you to get you started)!
 function getRandomIndex(array) {
