@@ -51,15 +51,17 @@ button:hover {
 .poster-img {
   background-size: cover;
   border: 2px solid white;
-  height: 450px;
-  width: 800px;
+  height: auto;
+  width: 100%;
 }
 
 .poster-title,
 .poster-quote {
   color: white;
   line-height: 1;
-  width: 90%;
+  width: auto;
+  text-align: center;
+  letter-spacing: 3px;
 }
 
 .poster-title {
