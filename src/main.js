@@ -127,7 +127,7 @@ var quotes = [
 var currentPoster;
 
 // event listeners go here 👇
-window.onload = displayRandomPoster; //=> window.addEventListener('load', displayRandomPoster)
+window.onload = displayRandomPoster;
 showRandomButton.addEventListener('click', displayRandomPoster);
 makeYourPoster.addEventListener('click', showPostersForm);
 showMyPosterButton.addEventListener('click', createUserPoster)
@@ -157,8 +157,8 @@ function createUserPoster(event) {
   event.preventDefault();
   storeUsersData()
   currentPoster = new Poster(images[0], titles[0], quotes[0])
-  goHome(); //takes us back to main page
-  injectUsersPoster()//display the newley created poster image
+  goHome();
+  injectUsersPoster()
 };
 
 function goHome() {
@@ -177,7 +177,6 @@ function showPostersForm() {
   mainSection.classList.add('hidden');
 };
 
-// (we've provided one for you to get you started)!
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
 }
