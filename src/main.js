@@ -2,6 +2,9 @@
 var mainImage = document.querySelector('.poster-img');
 var mainTitle = document.querySelector('.poster-title');
 var mainQuote = document.querySelector('.poster-quote');
+//_Buttons
+var showRandomButton = document.querySelector('.show-random');
+
 
 // we've provided you with some data to work with 👇
 var images = [
@@ -112,7 +115,8 @@ var currentPoster;
 var makeYourPoster = document.querySelector('.show-form');
 
 // event listeners go here 👇
-window.onload = displayRandomPoster;
+window.onload = displayRandomPoster; //=> window.addEventListener('load', displayRandomPoster)
+showRandomButton.addEventListener('click', displayRandomPoster);
 makeYourPoster.addEventListener('click', showPostersForm);
 
 // functions and event handlers go here 👇
