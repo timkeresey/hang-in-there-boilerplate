@@ -117,8 +117,10 @@ makeYourPoster.addEventListener('click', showPostersForm);
 
 // functions and event handlers go here 👇
 function displayRandomPoster() {
-  mainImage.src = images[0]
-}
+  mainImage.src = images[getRandomIndex(images)];
+  mainTitle.innerText = titles[getRandomIndex(titles)];
+  mainQuote.innerText = quotes[getRandomIndex(quotes)];
+};
 function showPostersForm() {
 
 }
