@@ -3,7 +3,10 @@ var mainImage = document.querySelector('.poster-img');
 var mainTitle = document.querySelector('.poster-title');
 var mainQuote = document.querySelector('.poster-quote');
 //_Buttons
+var savePosterButton = document.querySelector('.save-poster');
+var showSavedButton = document.querySelector('.show-saved');
 var showRandomButton = document.querySelector('.show-random');
+var makeYourPoster = document.querySelector('.show-form');
 
 
 // we've provided you with some data to work with 👇
@@ -112,7 +115,6 @@ var quotes = [
 //   )
 // ];
 var currentPoster;
-var makeYourPoster = document.querySelector('.show-form');
 
 // event listeners go here 👇
 window.onload = displayRandomPoster; //=> window.addEventListener('load', displayRandomPoster)
