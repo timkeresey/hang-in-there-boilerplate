@@ -14,6 +14,10 @@ var backToMainButton = document.querySelector('.back-to-main');
 var mainSection = document.querySelector('.main-poster');
 var formSection = document.querySelector('.poster-form');
 var savedPostersSection = document.querySelector('.saved-posters');
+//_form
+var inputImage = document.querySelector('#poster-image-url')
+var inputTitle = document.querySelector('#poster-title')
+var inputQuote = document.querySelector('#poster-quote')
 
 // we've provided you with some data to work with 👇
 var images = [
@@ -123,7 +127,7 @@ var quotes = [
 var currentPoster;
 
 // event listeners go here 👇
-window.onload = displayRandomPoster; //=> window.addEventListener('load', displayRandomPoster)
+window.onload = displayRandomPoster;
 showRandomButton.addEventListener('click', displayRandomPoster);
 makeYourPoster.addEventListener('click', showPostersForm);
 showMyPosterButton.addEventListener('click', createUserPoster)
@@ -132,6 +136,18 @@ showSavedButton.addEventListener('click', displaySavedPosters);
 backToMainButton.addEventListener('click', goHome);
 
 // functions and event handlers go here 👇
+function injectUsersPoster() {
+  mainImage.src = images[0];
+  mainTitle.innerText = titles[0];
+  mainQuote.innerText = quotes[0];
+}
+
+function storeUsersData() {
+  images.unshift(inputImage.value)
+  titles.unshift(inputTitle.value)
+  quotes.unshift(inputQuote.value)
+}
+
 function displaySavedPosters() {
   savedPostersSection.classList.remove('hidden');
   mainSection.classList.add('hidden');
@@ -139,7 +155,10 @@ function displaySavedPosters() {
 
 function createUserPoster(event) {
   event.preventDefault();
+  storeUsersData()
+  currentPoster = new Poster(images[0], titles[0], quotes[0])
   goHome();
+  injectUsersPoster()
 };
 
 function goHome() {
@@ -158,8 +177,6 @@ function showPostersForm() {
   mainSection.classList.add('hidden');
 };
 
-
-// (we've provided one for you to get you started)!
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
 }
