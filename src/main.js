@@ -19,13 +19,6 @@ var inputImage = document.querySelector('#poster-image-url')
 var inputTitle = document.querySelector('#poster-title')
 var inputQuote = document.querySelector('#poster-quote')
 
-// var savedPosters = [
-//   makePoster(
-//     "https://i.giphy.com/media/5LU6ZcEGBbhVS/giphy.gif",
-//     "Optimism",
-//     "Keep a joyful heart!"
-//   )
-// ];
 var currentPoster;
 
 // event listeners go here 👇
@@ -36,8 +29,13 @@ showMyPosterButton.addEventListener('click', createUserPoster)
 nevermindButton.addEventListener('click', goHome);
 showSavedButton.addEventListener('click', displaySavedPosters);
 backToMainButton.addEventListener('click', goHome);
+savePosterButton.addEventListener('click', saveUserPoster);
 
 // functions and event handlers go here 👇
+function saveUserPoster() {
+  savedPosters.unshift(currentPoster);
+  console.log(savedPosters);
+}
 function injectUsersPoster() {
   mainImage.src = images[0];
   mainTitle.innerText = titles[0];
