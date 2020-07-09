@@ -136,10 +136,16 @@ showSavedButton.addEventListener('click', displaySavedPosters);
 backToMainButton.addEventListener('click', goHome);
 
 // functions and event handlers go here 👇
+function injectUsersPoster() {
+  mainImage.src = images[0];
+  mainTitle.innerText = titles[0];
+  mainQuote.innerText = quotes[0];
+}
+
 function storeUsersData() {
-  console.log(inputImage.value)
-  console.log(inputTitle.value)
-  console.log(inputQuote.value)
+  images.unshift(inputImage.value)
+  titles.unshift(inputTitle.value)
+  quotes.unshift(inputQuote.value)
 }
 
 function displaySavedPosters() {
@@ -150,9 +156,9 @@ function displaySavedPosters() {
 function createUserPoster(event) {
   event.preventDefault();
   storeUsersData()
-  // create a new instance of the poster class
+  currentPoster = new Poster(images[0], titles[0], quotes[0])
   goHome(); //takes us back to main page
-  //display the newley created poster image
+  injectUsersPoster()//display the newley created poster image
 };
 
 function goHome() {
