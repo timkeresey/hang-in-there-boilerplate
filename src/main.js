@@ -33,9 +33,11 @@ savePosterButton.addEventListener('click', saveUserPoster);
 
 // functions and event handlers go here 👇
 function saveUserPoster() {
-  savedPosters.unshift(currentPoster);
-  console.log(savedPosters);
+  if (!savedPosters.includes(currentPoster)){
+    savedPosters.unshift(currentPoster);
+  };
 }
+
 function injectUsersPoster() {
   mainImage.src = images[0];
   mainTitle.innerText = titles[0];
