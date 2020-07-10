@@ -35,6 +35,7 @@ savePosterButton.addEventListener('click', saveUserPoster);
 function saveUserPoster() {
   if (!savedPosters.includes(currentPoster)){
     savedPosters.unshift(currentPoster);
+    console.log(savedPosters)
   };
 }
 
@@ -72,6 +73,8 @@ function displayRandomPoster() {
   mainImage.src = images[getRandomIndex(images)];
   mainTitle.innerText = titles[getRandomIndex(titles)];
   mainQuote.innerText = quotes[getRandomIndex(quotes)];
+  currentPoster = new Poster(mainImage.src, mainTitle.innerText, mainQuote.innerText)
+  console.log(currentPoster)
 };
 
 function showPostersForm() {
