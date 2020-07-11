@@ -43,24 +43,24 @@ The Hang-in-there project aims to provide a motivational random poster but it al
 
     * When the user first opens the browser, a new random poster is generated and displayed on the main posters' view.
 
-  <img src=" " alt="The user fills out the New Activity form and a timer appears." height=auto width=75%/>
+  <img src=" " alt="." height=auto width=75%/>
 
     * the user clicks 'Start' and the countdown begins
     * once the countdown is complete, the message 'Well Done' appears
     * then the user clicks 'Log Activity' and a new activity card appears below 'Past Activities'
 
-  <img src=" " alt="The user clicks start, the timer counts down, and then they log the activity." height=auto width=75%/>
+  <img src=" " alt="." height=auto width=75%/>
 
     * the user clicks 'Create A New Activity' and is brought back to the activity form
     * the user inputs new information and initiates the countdown
     * when the user logs the new activity, it appears with the other past activity
 
-  <img src=" " alt="The user creates and logs a new activity." height=auto width=75%/>
+  <img src=" " alt="" height=auto width=75%/>
 
     * in mobile view, the user has all of the same functionality
     * the past activities appear at the bottom instead of to the right
 
-  <img src="" alt="In mobile view, the user creates a new activity and logs the activity." height=auto width=25%/>
+  <img src="" alt="" height=auto width=25%/>
 
 ### Comps provided by instructors
 
