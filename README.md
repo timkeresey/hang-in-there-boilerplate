@@ -22,14 +22,13 @@ The Hang-in-there applications aims to generate a motivational random poster to 
   * DOM manipulation using JavaScript classes
   * Git workflow while working as a team with multiple contributors
   * Writing DRY JavaScript
-  *  
+
 
 ## Wins
 
   * Generate and display random posters
   * Display saved posters
   * Delete mini-posters on `db-click`
-  * Event listeners
   * ~Event handlers~
 
 ## Future Goals
@@ -41,6 +40,7 @@ The Hang-in-there applications aims to generate a motivational random poster to 
 
 ## In Action
 
+  #### Take 1
     * When the user first opens the browser, a new random poster is generated and displayed on the main poster's view.
 
   <img src=" https://media.giphy.com/media/RfSKYR2xDTVnfnwWql/giphy.gif" alt="When the user open's the application for the first time, the application generates a new random poster and displays the newly created poster on the main view." height=auto width=75%/>
@@ -55,6 +55,7 @@ The Hang-in-there applications aims to generate a motivational random poster to 
         - the view changes to the main page
         - the newly created poster is displayed on the main page.
 
+#### Take 2
   <img src="https://media.giphy.com/media/iezamcB9z8shxbTmo4/giphy.gif" alt="When the user clicks on the make new poster button, the make poster form is displayed and the user is presented with 3 input fields where the user can add an image url, a title and a quote. When the user clicks on the show my poster button a new poster is generated, the view changes to the main page and the newly created poster is displayed." height=auto width=75%/>
 
     * When the user clicks on the save this button:
@@ -64,11 +65,11 @@ The Hang-in-there applications aims to generate a motivational random poster to 
     * When user clicks on the show saved posters button:
 
         - The view changes one more time
-
+#### Take 3
   <img src="https://media.giphy.com/media/f8W0AgSwh2YBpkU0Cu/giphy.gif" alt="When the user clicks on the save this button, the current poster is saved. After the poster has been saved the user can click on the show saved posters button. The view changes one more time " height=auto width=75%/>
 
     * When the user is on the saved poster's view and double clicks on any mini poster, the mini poster is deleted from the saved posters grid.
-
+#### Take 4
   <img src="" alt="When the user is on the saved poster's view and double clicks on any mini poster, the mini poster is deleted" height=auto width=25%/>
 
 ### Comps provided by instructors
