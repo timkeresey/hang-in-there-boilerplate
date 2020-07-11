@@ -1,24 +1,76 @@
 # Hang In There
 
-A boilerplate repo. 
+## Contributors
 
-## Set Up
+[Tim Keresey](https://github.com/timkeresey), [Orlando Murcio](https://www.github.com/atos20)
 
-1. One teammate: fork this repository
-2. Go to settings and turn on GitHub Pages for this repository
-3. All teammates: clone down this repository
-4. `cd` into the repository
-5. Run `open index.html` to view it in the browser
+## Context
 
-## Progression
+This application is a group project of the first Module of Turing School of Software and Design. As a team we completed this application during the course of 6 days. We use the provided HTML and CSS templates as well as the `poster.js` which contained the poster's class. As a team we decided to create a third file named `data.js` that organized our data structure. Most of the work took place in the `main.js` file where the main functionality was build to complete each iteration.
 
-### Iteration 0 - Main Page
+The Hang-in-there project aims to provide a motivational random poster but it also allows the user to create their own.
+
+### Technologies used:
+
+ * JavaScript
+ * Terminal
+ * GitHub
+ * Google's developer tools
+
+## Challenges
+
+  * DOM manipulation using JavaScript classes
+  * Git workflow while working as a team with multiple contributors
+  * Writing DRY JavaScript
+  *  
+
+## Wins
+
+  * Generate and display random posters
+  * Display saved posters
+  * Delete mini-posters on `db-click`
+  * Event listeners
+  * ~Event handlers~
+
+## Future Goals
+
+  * Implement data validation and error handling
+  * In the main poster view, allow users to update a newly created poster
+  * When a user single clicks a saved poster, create a model to view it larger
+  * Allow users to drag and drop saved posters into whatever order they want them to appear
+
+## In Action
+
+    * When the user first opens the browser, a new random poster is generated and displayed on the main posters' view.
+
+  <img src="" alt="The user fills out the New Activity form and a timer appears." height=auto width=75%/>
+
+    * the user clicks 'Start' and the countdown begins
+    * once the countdown is complete, the message 'Well Done' appears
+    * then the user clicks 'Log Activity' and a new activity card appears below 'Past Activities'
+
+  <img src="" alt="The user clicks start, the timer counts down, and then they log the activity." height=auto width=75%/>
+
+    * the user clicks 'Create A New Activity' and is brought back to the activity form
+    * the user inputs new information and initiates the countdown
+    * when the user logs the new activity, it appears with the other past activity
+
+  <img src="" alt="The user creates and logs a new activity." height=auto width=75%/>
+
+    * in mobile view, the user has all of the same functionality
+    * the past activities appear at the bottom instead of to the right
+
+  <img src="" alt="In mobile view, the user creates a new activity and logs the activity." height=auto width=25%/>
+
+### Comps provided by instructors
+
+#### Iteration 0 - Main Page
 
 ![screenshot of main page showing poster](/readme-imgs/homepage.png)
 
 - When the page loads, we should see a poster with a randomly selected image, title, and quote
 
-### Iteration 1 - Switching Views
+#### Switching Views
 
 Form page:
 ![screenshot of form](/readme-imgs/form.png)
@@ -26,14 +78,9 @@ Form page:
 Saved posters page (once working with extra saved posters):
 ![screenshot of saved posters page](/readme-imgs/saved.png)
 
-- When a user clicks the "Make Your Own Poster" button, we should see the form, and the main poster should be hidden
-- When a user clicks the "View Saved Posters" button, we should see the saved posters area, and the main poster should be hidden
-- When a user clicks the "Nevermind, take me back!" or "Back to Main" buttons, we should only see the main poster section
-- In summary: Be able to switch between the three views (main poster, form, and saved posters) on the correct button clicks
 
-_Hint: go check out the HTML and CSS files to see how the form and saved posters sections are being hidden in the first place_
 
-## Iteration 2 - Creating a New Poster
+#### Create a New Poster Form
 
 Form being filled out:
 ![screenshot of form](/readme-imgs/form.png)
@@ -41,39 +88,20 @@ Form being filled out:
 Once poster is saved:
 ![screenshot of result](/readme-imgs/form-result.png)
 
-- On the new poster form view, users should be able to fill out the three input fields and then hit the save button
-- When the save button is clicked, several things will happen:
-  - Save the submitted data into the respective arrays (image URL into the images array, etc) so that future random posters can use the user-created data
-  - Use the values from the inputs to create a new instance of our Poster class
-  - Change back to the main poster view (hiding the form view again)
-  - Display the newly created poster image, title, and quote in the main view
 
-## Iteration 3 - Saving & Viewing Posters
+#### Saved Posters View
 
 Saved posters view:
 ![screenshot of saved posters section](/readme-imgs/saved.png)
 
-- When a user clicks the "Save This Poster" button, the current main poster will be added to the `savedPosters` array.
-- If a user clicks the "Save This Poster" more than once on a single poster, it will still only be saved once (no duplicates)
-- When a user clicks the "Show Saved Posters" button, we should see the saved posters section
-- All the posters in the `savedPosters` array should be displayed in the saved posters grid section
+- If you want to contribute
+- clone the repository to your computer `git clone <URL>`
+- cd into the repository `cd <repo-name>`
+- create a new branch with `git checkout -b <new branch name>`
+- open your text editor and add or remove functionalities to the site.
+- `git add` and `git commit -m` to save the changes to your local repository
+- `git push` your changes
+- create a new pull request!
 
-## Iteration 4 - Deleting Saved Posters
-
-- From the saved posters view, if a user double clicks a saved poster, it will be deleted
-
-_Hint: How will you update the data model to achieve this?_
-
-## Optional Extensions - Gettin' fancy
-
-Here's a list of possible extensions to implement - but **ONLY IF** your team has completed all the previous iterations **AND** have cleaned up your code to make it DRYer and more readable.
-
-You are welcome to add your own extensions. Be sure they are thoughtful in terms of UX/UI, and that they do not break any prior functionality.
-
-- Implement data validation and error handling into the form (disable button, provide error messages if data entered is not correct, etc)
-- In the main poster view, allow users to click each piece of the poster (image, title, quote) to update just that piece with another random item from the appropriate array
-- When a user single clicks a saved poster, create a modal to view it larger
-- Allow users to drag and drop saved posters into whatever order they want them to appear
-
-
-Project spec & rubric can be found [here](https://frontend.turing.io/projects/module-1/hang-in-there.html)
+## Project Manager
+ > [Hannah Hudson](https://github.com/hannahhch)
