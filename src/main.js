@@ -86,6 +86,7 @@ function createUserPoster(event) {
 
 function goHome() {
   formSection.classList.add('hidden');
+  savedPostersSection.classList.add('hidden')
   mainSection.classList.remove('hidden');
 };
 
