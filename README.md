@@ -43,19 +43,19 @@ The Hang-in-there project aims to provide a motivational random poster but it al
 
     * When the user first opens the browser, a new random poster is generated and displayed on the main posters' view.
 
-  <img src=" " alt="When the user open's the application for the first time, the application generates a new random poster and displays the poster on the main view." height=auto width=75%/>
+  <img src=" https://media.giphy.com/media/RfSKYR2xDTVnfnwWql/giphy.gif" alt="When the user open's the application for the first time, the application generates a new random poster and displays the newly created poster on the main view." height=auto width=75%/>
 
     *
 
-  <img src=" " alt="." height=auto width=75%/>
+  <img src=" https://media.giphy.com/media/LLwFMVAoDD8ZKBxcvz/giphy.gif" alt="When the user clicks on the make new poster button, the make poster form is displayed and the user is presented with 3 input fields where the user can add an image url, a title and a quote. When the user clicks on the show my poster button a new poster is generated, the view changes to the main page and the newly created poster is displayed." height=auto width=75%/>
 
     *
 
-  <img src=" " alt="" height=auto width=75%/>
+  <img src="https://media.giphy.com/media/f8W0AgSwh2YBpkU0Cu/giphy.gif" alt="When the user clicks on the save this button, the current poster is saved. After the poster has been saved the user can click on the show saved posters button. The view changes one more time " height=auto width=75%/>
 
     *
 
-  <img src="" alt="" height=auto width=25%/>
+  <img src="" alt="When the user is on the saved posters view and double clicks on any mini poster, the mini poster is deleted" height=auto width=25%/>
 
 ### Comps provided by instructors
 
