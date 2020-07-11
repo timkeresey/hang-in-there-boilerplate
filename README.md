@@ -74,11 +74,9 @@ The Hang-in-there applications aims to generate a motivational random poster to 
 
 ### Comps provided by instructors
 
-#### Iteration 0 - Main Page
+#### Main Page
 
 ![screenshot of main page showing poster](/readme-imgs/homepage.png)
-
-- When the page loads, we should see a poster with a randomly selected image, title, and quote
 
 #### Switching Views
 
@@ -104,6 +102,8 @@ Once poster is saved:
 Saved posters view:
 ![screenshot of saved posters section](/readme-imgs/saved.png)
 
+### Contribute to the project
+
 - If you want to contribute
 - clone the repository to your computer `git clone <URL>`
 - cd into the repository `cd <repo-name>`
@@ -113,5 +113,5 @@ Saved posters view:
 - `git push` your changes
 - create a new pull request!
 
-## Project Manager
+### Project Manager
  > [Hannah Hudson](https://github.com/hannahhch)
