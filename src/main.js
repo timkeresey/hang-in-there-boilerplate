@@ -38,9 +38,9 @@ function displayGallery() {
   savedPostersGrid.innerHTML =
   `
   <article class="mini-poster">
-    <img class="mini-poster" src="${images[0]}">
-    <h2 class="mini-poster">${titles[0]}</h2>
-    <h4 class="mini-poster">${quotes[0]}</h4>
+    <img src="${savedPosters[0].imageURL}">
+    <h2>${savedPosters[0].title}</h2>
+    <h4>${savedPosters[0].quote}</h4>
   </article>
   `
   //Expecting all elements to exist in one section on the grid, but each element
