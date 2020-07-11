@@ -35,14 +35,15 @@ savePosterButton.addEventListener('click', savePoster);
 // functions and event handlers go here 👇
 function displayGallery() {
   for (i = 0; i < savedPosters.length; i++) {
-  savedPostersGrid.innerHTML =
+  savedPostersGrid.innerHTML +=
   `
   <article class="mini-poster">
-    <img src="${savedPosters[0].imageURL}">
-    <h2>${savedPosters[0].title}</h2>
-    <h4>${savedPosters[0].quote}</h4>
+    <img src="${savedPosters[i].imageURL}">
+    <h2>${savedPosters[i].title}</h2>
+    <h4>${savedPosters[i].quote}</h4>
   </article>
   `
+  console.log(savedPosters[i])
   //Expecting all elements to exist in one section on the grid, but each element
   //is taking up its own grid space.
     //Issue arises when trying save posters to save posters grid after clicking
