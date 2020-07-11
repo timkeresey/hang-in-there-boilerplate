@@ -14,6 +14,7 @@ var backToMainButton = document.querySelector('.back-to-main');
 var mainSection = document.querySelector('.main-poster');
 var formSection = document.querySelector('.poster-form');
 var savedPostersSection = document.querySelector('.saved-posters');
+var savedPostersGrid = document.querySelector('.saved-posters-grid');
 //_form
 var inputImage = document.querySelector('#poster-image-url')
 var inputTitle = document.querySelector('#poster-title')
@@ -29,10 +30,26 @@ showMyPosterButton.addEventListener('click', createUserPoster)
 nevermindButton.addEventListener('click', goHome);
 showSavedButton.addEventListener('click', displaySavedPosters);
 backToMainButton.addEventListener('click', goHome);
-savePosterButton.addEventListener('click', saveUserPoster);
+savePosterButton.addEventListener('click', savePoster);
 
 // functions and event handlers go here 👇
-function saveUserPoster() {
+function displayGallery() {
+  for (i = 0; i < savedPosters.length; i++) {
+  savedPostersGrid.innerHTML =
+  `
+  <article class="mini-poster">
+    <img class="mini-poster" src="${images[0]}">
+    <h2 class="mini-poster">${titles[0]}</h2>
+    <h4 class="mini-poster">${quotes[0]}</h4>
+  </article>
+  `
+  //Expecting all elements to exist in one section on the grid, but each element
+  //is taking up its own grid space.
+    //Issue arises when trying save posters to save posters grid after clicking
+    //show saved posters button.
+  }
+}
+function savePoster() {
   if (!savedPosters.includes(currentPoster)){
     savedPosters.unshift(currentPoster);
     console.log(savedPosters)
@@ -54,6 +71,9 @@ function storeUsersData() {
 function displaySavedPosters() {
   savedPostersSection.classList.remove('hidden');
   mainSection.classList.add('hidden');
+  //display savedPosters array on savedPostersGrid
+    //loop through each element in savedPosters array
+    displayGallery()
 };
 
 function createUserPoster(event) {
