@@ -8,7 +8,7 @@
 
 This application is a group project of the first Module of Turing School of Software and Design. As a team we completed this application during the course of 6 days. We use the provided HTML and CSS templates as well as the `poster.js` which contained the poster's class. As a team we decided to create a third file named `data.js` that organized our data structure. Most of the work took place in the `main.js` file where the main functionality was build to complete each iteration.
 
-The Hang-in-there project aims to provide a motivational random poster but it also allows the user to create their own.
+The Hang-in-there applications aims to generate a motivational random poster to improve the mental state of the user and it also provides the user the flexibility to create their own poster by using the 'make your poster' form.
 
 ### Technologies used:
 
