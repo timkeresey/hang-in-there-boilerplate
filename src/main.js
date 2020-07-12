@@ -25,7 +25,6 @@ var currentPoster;
 
 // event listeners go here 👇
 window.onload = displayRandomPoster;
-savedPostersSection.addEventListener('dblclick', deletePoster);
 showRandomButton.addEventListener('click', displayRandomPoster);
 makeYourPoster.addEventListener('click', showPostersForm);
 showMyPosterButton.addEventListener('click', createUserPoster)
@@ -33,38 +32,41 @@ nevermindButton.addEventListener('click', goHome);
 showSavedButton.addEventListener('click', displaySavedPosters);
 backToMainButton.addEventListener('click', goHome);
 savePosterButton.addEventListener('click', savePoster);
+savedPostersSection.addEventListener('dblclick', deletePoster);
 
 // functions and event handlers go here 👇
-function deletePoster() {
-  //console.log(event);
+function deletePoster(event) {
+  console.log(event);
   //console.log('this is a dbl click');
-  event.target.classList.add('delete');
+  event.target.classList.add('delete');// what is th purpose of having the class name of 'delete' on the section
+  //console.log(miniPoster)
 if (event.target.classList.contains('delete')) {
   savedPostersGrid.removeChild(event.target)
-}
+  }
   //console.log(miniPoster)
 }
 function displayGallery() {
+  savedPostersGrid.innerHTML = ''
   for (i = 0; i < savedPosters.length; i++) {
-  savedPostersGrid.innerHTML +=
-  `
-  <article class="mini-poster">
-    <img src="${savedPosters[i].imageURL}">
-    <h2>${savedPosters[i].title}</h2>
-    <h4>${savedPosters[i].quote}</h4>
-  </article>
-  `
+    savedPostersGrid.innerHTML +=
+    `
+    <article class="mini-poster">
+      <img src="${savedPosters[i].imageURL}">
+      <h2>${savedPosters[i].title}</h2>
+      <h4>${savedPosters[i].quote}</h4>
+    </article>
+    `
   //console.log(savedPosters[i])
   //Expecting all elements to exist in one section on the grid, but each element
   //is taking up its own grid space.
     //Issue arises when trying save posters to save posters grid after clicking
     //show saved posters button.
-  }
+  };
 }
 function savePoster() {
   if (!savedPosters.includes(currentPoster)){
     savedPosters.unshift(currentPoster);
-    console.log(savedPosters)
+    // console.log(savedPosters)
   };
 }
 
@@ -107,7 +109,7 @@ function displayRandomPoster() {
   mainTitle.innerText = titles[getRandomIndex(titles)];
   mainQuote.innerText = quotes[getRandomIndex(quotes)];
   currentPoster = new Poster(mainImage.src, mainTitle.innerText, mainQuote.innerText)
-  console.log(currentPoster)
+  // console.log(currentPoster)
 };
 
 function showPostersForm() {
