@@ -1,24 +1,84 @@
 # Hang In There
 
-A boilerplate repo. 
+## Contributors
 
-## Set Up
+[Tim Keresey](https://github.com/timkeresey), [Orlando Murcio](https://www.github.com/atos20)
 
-1. One teammate: fork this repository
-2. Go to settings and turn on GitHub Pages for this repository
-3. All teammates: clone down this repository
-4. `cd` into the repository
-5. Run `open index.html` to view it in the browser
+## Context
 
-## Progression
+This application is a group project of the first Module of Turing School of Software and Design. As a team we completed this application during the course of 6 days. We use the provided HTML and CSS templates as well as the `poster.js` which contained the poster's class. As a team we decided to create a third file named `data.js` that organized our data structure. Most of the work took place in the `main.js` file where the main functionality was build to complete each iteration.
 
-### Iteration 0 - Main Page
+The Hang-in-there applications aims to generate a motivational random poster to improve the mental state of the user and it also provides the user the flexibility to create their own poster by using the 'make your poster' form.
+
+### Technologies used:
+
+ * JavaScript
+ * Terminal
+ * GitHub
+ * Google's developer tools
+
+## Challenges
+
+  * DOM manipulation using JavaScript classes
+  * Git workflow while working as a team with multiple contributors
+  * Writing DRY JavaScript
+
+
+## Wins
+
+  * Generate and display random posters
+  * Display saved posters
+  * Delete mini-posters on `db-click`
+  * ~Event handlers~
+
+## Future Goals
+
+  * Implement data validation and error handling
+  * In the main poster view, allow users to update a newly created poster
+  * When a user single clicks a saved poster, create a model to view it larger
+  * Allow users to drag and drop saved posters into whatever order they want them to appear
+
+## In Action
+
+  #### Take 1
+    * When the user first opens the browser, a new random poster is generated and displayed on the main poster's view.
+
+  <img src=" https://media.giphy.com/media/RfSKYR2xDTVnfnwWql/giphy.gif" alt="When the user open's the application for the first time, the application generates a new random poster and displays the newly created poster on the main view." height=auto width=75%/>
+
+    * When the user clicks on the make new poster button:
+
+        - the make poster form is displayed and the user is presented the make your poster's formSection
+
+    * When the user clicks on the show my poster button:
+
+        - new poster is generated
+        - the view changes to the main page
+        - the newly created poster is displayed on the main page.
+
+#### Take 2
+  <img src="https://media.giphy.com/media/iezamcB9z8shxbTmo4/giphy.gif" alt="When the user clicks on the make new poster button, the make poster form is displayed and the user is presented with 3 input fields where the user can add an image url, a title and a quote. When the user clicks on the show my poster button a new poster is generated, the view changes to the main page and the newly created poster is displayed." height=auto width=75%/>
+
+    * When the user clicks on the save this button:
+
+        - the current poster is saved
+
+    * When user clicks on the show saved posters button:
+
+        - The view changes one more time
+#### Take 3
+  <img src="https://media.giphy.com/media/f8W0AgSwh2YBpkU0Cu/giphy.gif" alt="When the user clicks on the save this button, the current poster is saved. After the poster has been saved the user can click on the show saved posters button. The view changes one more time " height=auto width=75%/>
+
+    * When the user is on the saved poster's view and double clicks on any mini poster, the mini poster is deleted from the saved posters grid.
+#### Take 4
+  <img src="" alt="When the user is on the saved poster's view and double clicks on any mini poster, the mini poster is deleted" height=auto width=25%/>
+
+### Comps provided by instructors
+
+#### Main Page
 
 ![screenshot of main page showing poster](/readme-imgs/homepage.png)
 
-- When the page loads, we should see a poster with a randomly selected image, title, and quote
-
-### Iteration 1 - Switching Views
+#### Switching Views
 
 Form page:
 ![screenshot of form](/readme-imgs/form.png)
@@ -26,14 +86,9 @@ Form page:
 Saved posters page (once working with extra saved posters):
 ![screenshot of saved posters page](/readme-imgs/saved.png)
 
-- When a user clicks the "Make Your Own Poster" button, we should see the form, and the main poster should be hidden
-- When a user clicks the "View Saved Posters" button, we should see the saved posters area, and the main poster should be hidden
-- When a user clicks the "Nevermind, take me back!" or "Back to Main" buttons, we should only see the main poster section
-- In summary: Be able to switch between the three views (main poster, form, and saved posters) on the correct button clicks
 
-_Hint: go check out the HTML and CSS files to see how the form and saved posters sections are being hidden in the first place_
 
-## Iteration 2 - Creating a New Poster
+#### Create a New Poster Form
 
 Form being filled out:
 ![screenshot of form](/readme-imgs/form.png)
@@ -41,39 +96,22 @@ Form being filled out:
 Once poster is saved:
 ![screenshot of result](/readme-imgs/form-result.png)
 
-- On the new poster form view, users should be able to fill out the three input fields and then hit the save button
-- When the save button is clicked, several things will happen:
-  - Save the submitted data into the respective arrays (image URL into the images array, etc) so that future random posters can use the user-created data
-  - Use the values from the inputs to create a new instance of our Poster class
-  - Change back to the main poster view (hiding the form view again)
-  - Display the newly created poster image, title, and quote in the main view
 
-## Iteration 3 - Saving & Viewing Posters
+#### Saved Posters View
 
 Saved posters view:
 ![screenshot of saved posters section](/readme-imgs/saved.png)
 
-- When a user clicks the "Save This Poster" button, the current main poster will be added to the `savedPosters` array.
-- If a user clicks the "Save This Poster" more than once on a single poster, it will still only be saved once (no duplicates)
-- When a user clicks the "Show Saved Posters" button, we should see the saved posters section
-- All the posters in the `savedPosters` array should be displayed in the saved posters grid section
+### Contribute to the project
 
-## Iteration 4 - Deleting Saved Posters
+- If you want to contribute
+- clone the repository to your computer `git clone <URL>`
+- cd into the repository `cd <repo-name>`
+- create a new branch with `git checkout -b <new branch name>`
+- open your text editor and add or remove functionalities to the site.
+- `git add` and `git commit -m` to save the changes to your local repository
+- `git push` your changes
+- create a new pull request!
 
-- From the saved posters view, if a user double clicks a saved poster, it will be deleted
-
-_Hint: How will you update the data model to achieve this?_
-
-## Optional Extensions - Gettin' fancy
-
-Here's a list of possible extensions to implement - but **ONLY IF** your team has completed all the previous iterations **AND** have cleaned up your code to make it DRYer and more readable.
-
-You are welcome to add your own extensions. Be sure they are thoughtful in terms of UX/UI, and that they do not break any prior functionality.
-
-- Implement data validation and error handling into the form (disable button, provide error messages if data entered is not correct, etc)
-- In the main poster view, allow users to click each piece of the poster (image, title, quote) to update just that piece with another random item from the appropriate array
-- When a user single clicks a saved poster, create a modal to view it larger
-- Allow users to drag and drop saved posters into whatever order they want them to appear
-
-
-Project spec & rubric can be found [here](https://frontend.turing.io/projects/module-1/hang-in-there.html)
+### Project Manager
+ > [Hannah Hudson](https://github.com/hannahhch)
