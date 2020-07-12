@@ -24,6 +24,7 @@ var currentPoster;
 
 // event listeners go here 👇
 window.onload = displayRandomPoster;
+savedPostersSection.addEventListener('dblclick', deletePoster);
 showRandomButton.addEventListener('click', displayRandomPoster);
 makeYourPoster.addEventListener('click', showPostersForm);
 showMyPosterButton.addEventListener('click', createUserPoster)
