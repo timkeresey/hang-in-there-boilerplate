@@ -15,6 +15,7 @@ var mainSection = document.querySelector('.main-poster');
 var formSection = document.querySelector('.poster-form');
 var savedPostersSection = document.querySelector('.saved-posters');
 var savedPostersGrid = document.querySelector('.saved-posters-grid');
+var miniPoster = document.querySelector('.mini-poster');
 //_form
 var inputImage = document.querySelector('#poster-image-url')
 var inputTitle = document.querySelector('#poster-title')
@@ -34,6 +35,15 @@ backToMainButton.addEventListener('click', goHome);
 savePosterButton.addEventListener('click', savePoster);
 
 // functions and event handlers go here 👇
+function deletePoster() {
+  //console.log(event);
+  //console.log('this is a dbl click');
+  event.target.classList.add('delete');
+if (event.target.classList.contains('delete')) {
+  savedPostersGrid.removeChild(event.target)
+}
+  //console.log(miniPoster)
+}
 function displayGallery() {
   for (i = 0; i < savedPosters.length; i++) {
   savedPostersGrid.innerHTML +=
@@ -44,7 +54,7 @@ function displayGallery() {
     <h4>${savedPosters[i].quote}</h4>
   </article>
   `
-  console.log(savedPosters[i])
+  //console.log(savedPosters[i])
   //Expecting all elements to exist in one section on the grid, but each element
   //is taking up its own grid space.
     //Issue arises when trying save posters to save posters grid after clicking
