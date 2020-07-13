@@ -15,6 +15,7 @@ var mainSection = document.querySelector('.main-poster');
 var formSection = document.querySelector('.poster-form');
 var savedPostersSection = document.querySelector('.saved-posters');
 var savedPostersGrid = document.querySelector('.saved-posters-grid');
+var miniPoster = document.querySelector('.mini-poster');
 //_form
 var inputImage = document.querySelector('#poster-image-url')
 var inputTitle = document.querySelector('#poster-title')
@@ -31,29 +32,41 @@ nevermindButton.addEventListener('click', goHome);
 showSavedButton.addEventListener('click', displaySavedPosters);
 backToMainButton.addEventListener('click', goHome);
 savePosterButton.addEventListener('click', savePoster);
+savedPostersSection.addEventListener('dblclick', deletePoster);
 
 // functions and event handlers go here 👇
-function displayGallery() {
+function deletePoster(event) {
+  var elementID = Number(event.target.id);
   for (i = 0; i < savedPosters.length; i++) {
-  savedPostersGrid.innerHTML +=
-  `
-  <article class="mini-poster">
-    <img src="${savedPosters[i].imageURL}">
-    <h2>${savedPosters[i].title}</h2>
-    <h4>${savedPosters[i].quote}</h4>
-  </article>
-  `
-  console.log(savedPosters[i])
+    if (elementID === savedPosters[i].id) {
+      savedPosters.splice(i, 1);
+    }
+  }
+  displayGallery();
+}
+
+function displayGallery() {
+  savedPostersGrid.innerHTML = ''
+  for (i = 0; i < savedPosters.length; i++) {
+    savedPostersGrid.innerHTML +=
+    `
+    <article class="mini-poster">
+      <img src="${savedPosters[i].imageURL}" id="${savedPosters[i].id}">
+      <h2>${savedPosters[i].title}</h2>
+      <h4>${savedPosters[i].quote}</h4>
+    </article>
+    `
+  //console.log(savedPosters[i])
   //Expecting all elements to exist in one section on the grid, but each element
   //is taking up its own grid space.
     //Issue arises when trying save posters to save posters grid after clicking
     //show saved posters button.
-  }
+  };
 }
 function savePoster() {
   if (!savedPosters.includes(currentPoster)){
     savedPosters.unshift(currentPoster);
-    console.log(savedPosters)
+    // console.log(savedPosters)
   };
 }
 
@@ -96,7 +109,7 @@ function displayRandomPoster() {
   mainTitle.innerText = titles[getRandomIndex(titles)];
   mainQuote.innerText = quotes[getRandomIndex(quotes)];
   currentPoster = new Poster(mainImage.src, mainTitle.innerText, mainQuote.innerText)
-  console.log(currentPoster)
+  // console.log(currentPoster)
 };
 
 function showPostersForm() {
