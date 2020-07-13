@@ -36,22 +36,22 @@ savedPostersSection.addEventListener('dblclick', deletePoster);
 
 // functions and event handlers go here 👇
 function deletePoster(event) {
-  console.log(event);
-  //console.log('this is a dbl click');
-  event.target.classList.add('delete');// what is th purpose of having the class name of 'delete' on the section
-  //console.log(miniPoster)
-if (event.target.classList.contains('delete')) {
-  savedPostersGrid.removeChild(event.target)
+  var elementID = Number(event.target.id);
+  for (i = 0; i < savedPosters.length; i++) {
+    if (elementID === savedPosters[i].id) {
+      savedPosters.splice(i, 1);
+    }
   }
-  //console.log(miniPoster)
+  displayGallery();
 }
+
 function displayGallery() {
   savedPostersGrid.innerHTML = ''
   for (i = 0; i < savedPosters.length; i++) {
     savedPostersGrid.innerHTML +=
     `
     <article class="mini-poster">
-      <img src="${savedPosters[i].imageURL}">
+      <img src="${savedPosters[i].imageURL}" id="${savedPosters[i].id}">
       <h2>${savedPosters[i].title}</h2>
       <h4>${savedPosters[i].quote}</h4>
     </article>
