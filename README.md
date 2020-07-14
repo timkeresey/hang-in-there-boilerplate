@@ -43,7 +43,7 @@ The Hang-in-there applications aims to generate a motivational random poster to 
   #### Take 1
     * When the user first opens the browser, a new random poster is generated and displayed on the main poster's view.
 
-  <img src=" https://media.giphy.com/media/RfSKYR2xDTVnfnwWql/giphy.gif" alt="When the user open's the application for the first time, the application generates a new random poster and displays the newly created poster on the main view." height=auto width=75%/>
+  <img src="https://media.giphy.com/media/RfSKYR2xDTVnfnwWql/giphy.gif" alt="When the user open's the application for the first time, the application generates a new random poster and displays the newly created poster on the main view." height=auto width=75%/>
 
     * When the user clicks on the make new poster button:
 
@@ -70,7 +70,7 @@ The Hang-in-there applications aims to generate a motivational random poster to 
 
     * When the user is on the saved poster's view and double clicks on any mini poster, the mini poster is deleted from the saved posters grid.
 #### Take 4
-  <img src="" alt="When the user is on the saved poster's view and double clicks on any mini poster, the mini poster is deleted" height=auto width=25%/>
+  <img src="https://media.giphy.com/media/S6labrJgDMe26HLEfR/giphy.gif" alt="When the user is on the saved poster's view and double clicks on any mini poster, the mini poster is deleted" height=auto width=25%/>
 
 ### Comps provided by instructors
 
