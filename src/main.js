@@ -1,4 +1,3 @@
-
 var mainImage = document.querySelector('.poster-img');
 var mainTitle = document.querySelector('.poster-title');
 var mainQuote = document.querySelector('.poster-quote');
