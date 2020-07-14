@@ -1,4 +1,5 @@
 // query selector variables go here 👇
+//_mainPoster
 var mainImage = document.querySelector('.poster-img');
 var mainTitle = document.querySelector('.poster-title');
 var mainQuote = document.querySelector('.poster-quote');
@@ -17,13 +18,11 @@ var savedPostersSection = document.querySelector('.saved-posters');
 var savedPostersGrid = document.querySelector('.saved-posters-grid');
 var miniPoster = document.querySelector('.mini-poster');
 //_form
-var inputImage = document.querySelector('#poster-image-url')
-var inputTitle = document.querySelector('#poster-title')
-var inputQuote = document.querySelector('#poster-quote')
+var inputImage = document.querySelector('#poster-image-url');
+var inputTitle = document.querySelector('#poster-title');
+var inputQuote = document.querySelector('#poster-quote');
 
-var currentPoster;
-
-// event listeners go here 👇
+//_event listeners
 window.onload = displayRandomPoster;
 showRandomButton.addEventListener('click', displayRandomPoster);
 makeYourPoster.addEventListener('click', showPostersForm);
@@ -34,7 +33,7 @@ backToMainButton.addEventListener('click', goHome);
 savePosterButton.addEventListener('click', savePoster);
 savedPostersSection.addEventListener('dblclick', deletePoster);
 
-// functions and event handlers go here 👇
+
 function deletePoster(event) {
   var elementID = Number(event.target.id);
   for (i = 0; i < savedPosters.length; i++) {
@@ -43,7 +42,7 @@ function deletePoster(event) {
     }
   }
   displayGallery();
-}
+};
 
 function displayGallery() {
   savedPostersGrid.innerHTML = ''
@@ -56,17 +55,13 @@ function displayGallery() {
       <h4>${savedPosters[i].quote}</h4>
     </article>
     `
-  //console.log(savedPosters[i])
-  //Expecting all elements to exist in one section on the grid, but each element
-  //is taking up its own grid space.
-    //Issue arises when trying save posters to save posters grid after clicking
-    //show saved posters button.
-  };
-}
+  }
+};
+
 function savePoster() {
   if (!savedPosters.includes(currentPoster)){
     savedPosters.unshift(currentPoster);
-    // console.log(savedPosters)
+
   };
 }
 
@@ -77,25 +72,23 @@ function injectUsersPoster() {
 }
 
 function storeUsersData() {
-  images.unshift(inputImage.value)
-  titles.unshift(inputTitle.value)
-  quotes.unshift(inputQuote.value)
+  images.unshift(inputImage.value);
+  titles.unshift(inputTitle.value);
+  quotes.unshift(inputQuote.value);
 }
 
 function displaySavedPosters() {
   savedPostersSection.classList.remove('hidden');
   mainSection.classList.add('hidden');
-  //display savedPosters array on savedPostersGrid
-    //loop through each element in savedPosters array
-    displayGallery()
+  displayGallery();
 };
 
 function createUserPoster(event) {
   event.preventDefault();
-  storeUsersData()
-  currentPoster = new Poster(images[0], titles[0], quotes[0])
+  storeUsersData();
+  currentPoster = new Poster(images[0], titles[0], quotes[0]);
   goHome();
-  injectUsersPoster()
+  injectUsersPoster();
 };
 
 function goHome() {
@@ -108,8 +101,7 @@ function displayRandomPoster() {
   mainImage.src = images[getRandomIndex(images)];
   mainTitle.innerText = titles[getRandomIndex(titles)];
   mainQuote.innerText = quotes[getRandomIndex(quotes)];
-  currentPoster = new Poster(mainImage.src, mainTitle.innerText, mainQuote.innerText)
-  // console.log(currentPoster)
+  currentPoster = new Poster(mainImage.src, mainTitle.innerText, mainQuote.innerText);
 };
 
 function showPostersForm() {
